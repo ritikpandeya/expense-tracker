@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Expense Tracker</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<button class="dark-toggle" onclick="toggleDark()">🌙</button>
+
+<div class="container">
+<h2>💰 Expense Tracker</h2>
+
+<div class="summary">
+<div><h4>Balance</h4><p id="balance">₹0</p></div>
+<div><h4>Income</h4><p id="income">₹0</p></div>
+<div><h4>Expense</h4><p id="expense">₹0</p></div>
+</div>
+
+<input id="text" placeholder="Description">
+<input id="amount" type="number" placeholder="Amount">
+
+<select id="category">
+<option>Food</option>
+<option>Travel</option>
+<option>Shopping</option>
+<option>Bills</option>
+<option>Other</option>
+</select>
+
+<button onclick="addTransaction()">Add</button>
+<button onclick="clearAll()">Clear All</button>
+<button onclick="exportCSV()">Export</button>
+
+<input id="search" placeholder="Search..." onkeyup="fetchTransactions()">
+
+<select id="filter" onchange="fetchTransactions()">
+<option value="">All</option>
+<option>Food</option>
+<option>Travel</option>
+<option>Shopping</option>
+<option>Bills</option>
+<option>Other</option>
+</select>
+
+<canvas id="chart"></canvas>
+
+<ul id="list"></ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<a href="login.html">Go to login</a>
+</body>
+</html>

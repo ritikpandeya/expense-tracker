@@ -1,0 +1,77 @@
+body{
+font-family:Segoe UI;
+margin:0;
+background:linear-gradient(135deg,#667eea,#764ba2);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+.container{
+background:white;
+padding:25px;
+width:420px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+text-align:center;
+}
+
+input,select,button{
+width:90%;
+margin:6px 0;
+padding:10px;
+border-radius:8px;
+border:1px solid #ddd;
+}
+
+button{
+background:#667eea;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+.summary{
+display:flex;
+justify-content:space-between;
+background:#f2f3f7;
+padding:10px;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+ul{padding:0}
+
+li{
+list-style:none;
+padding:10px;
+margin-top:8px;
+border-radius:8px;
+background:#f1f3f6;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.income{border-left:5px solid #2ecc71}
+.expense{border-left:5px solid #e74c3c}
+
+.dark{
+background:#111;
+color:white;
+}
+
+.dark .container{background:#222;color:white}
+
+.dark-toggle{
+position:fixed;
+top:15px;
+right:15px;
+padding:10px;
+border-radius:50%;
+}
+
+@media(max-width:500px){
+.container{width:95%}
+}
